@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>구해줘 씽크아일랜드 | 고동현 포트폴리오</title>
+<link rel="stylesheet" href="../style.css">
+</head><body>
+<header class="header"><div class="wrap nav"><a class="logo" href="../index.html">DHK<span>.</span></a>
+<nav><a href="../index.html">홈</a><a href="../full-portfolio.html">전체 포트폴리오</a><a href="../portfolio.pdf" target="_blank">PDF</a></nav></div></header>
+
+<main>
+<section class="project-hero"><div class="wrap">
+<div class="breadcrumbs"><a href="../index.html">Portfolio</a><span>/</span><span>구해줘 씽크아일랜드</span></div>
+<p class="kicker">PROJECT DETAIL</p><h1>구해줘 씽크아일랜드</h1><p class="lead">18종 미니게임을 개별 구현이 아닌 공통 흐름으로 관리</p>
+<div class="project-meta"><span class="chip">SNG + 교육용 미니게임</span><span class="chip">2023.06-2023.09</span><span class="chip">Unity 2022 LTS</span><span class="chip">C#</span><span class="chip">개발 1 / 기획 1 / 아트 1</span></div>
+<div class="actions">
+<a class="btn primary" href="#slides">원본 페이지 보기</a>
+<a class="btn" href="thinkisland.pdf" target="_blank">프로젝트 PDF</a>
+<a class="btn" href="https://github.com/kodh0206/ThinkIsland" target="_blank" rel="noopener">GitHub</a>
+<a class="btn" href="https://www.youtube.com/watch?v=1R9YMpN8Sgw" target="_blank" rel="noopener">플레이 영상</a>
+</div>
+</div></section>
+
+<section class="section"><div class="wrap">
+<div class="heading"><p class="kicker">PROBLEM SOLVING</p><h2>문제와 선택한 구조</h2></div>
+<div class="detail-grid"><div class="detail-card"><h3>상태 조합 문제</h3><p>대기·진행·종료 상태를 여러 bool 값으로 표현하면서 동시에 성립하면 안 되는 상태 조합이 만들어질 수 있는 문제를 확인했습니다.</p></div>
+<div class="detail-card"><h3>enum 상태 흐름 통합</h3><p>현재 상태를 MiniGameFlowState 하나로 제한하고, 각 상태가 화면·입력·타이머 실행 여부를 결정하도록 공통 진행 구조를 구성했습니다.</p></div>
+<div class="detail-card"><h3>18종 공통 전환 규칙</h3><p>대기 → 시작 전 안내 → 게임 진행 → 다음 게임 전환 → 종료의 흐름을 공통화하여 미니게임별 상태 판단 차이를 줄였습니다.</p></div>
+<div class="detail-card"><h3>Coroutine 수명 관리</h3><p>상태가 끝날 때 해당 상태에서 시작한 Coroutine을 중단하고 참조를 정리해 이전 상태의 타이머·화면·입력 작업이 남지 않도록 했습니다.</p></div></div>
+<div class="project-nav"><a class="" href="samurai.html"><strong>사무라이 키우기</strong><br><span>소규모 팀에서 상용 방치형 RPG의 클라이언트 시스템을 직접 설계</span></a><a class="" href="sumvive.html"><strong>SumVive</strong><br><span>랜덤 보드에서도 항상 플레이 가능한 산술 생존 퍼즐</span></a><a class="active" href="thinkisland.html"><strong>구해줘 씽크아일랜드</strong><br><span>18종 미니게임을 개별 구현이 아닌 공통 흐름으로 관리</span></a></div>
+</div></section>
+
+<section id="slides" class="section alt"><div class="wrap">
+<div class="gallery-head"><div><p class="kicker">ORIGINAL PORTFOLIO PAGES</p><h2>원본 포트폴리오 27-30페이지</h2></div>
+<p>이미지를 클릭하면 원본 PDF의 해당 페이지가 새 탭에서 열립니다.</p></div>
+<div class="slide-gallery">
+        <a class="slide" href="../portfolio.pdf#page=27" target="_blank" rel="noopener">
+          <img loading="lazy" src="../assets/slides/page-27.webp" alt="포트폴리오 27페이지">
+          <span>PAGE 27</span>
+        </a>
+
+        <a class="slide" href="../portfolio.pdf#page=28" target="_blank" rel="noopener">
+          <img loading="lazy" src="../assets/slides/page-28.webp" alt="포트폴리오 28페이지">
+          <span>PAGE 28</span>
+        </a>
+
+        <a class="slide" href="../portfolio.pdf#page=29" target="_blank" rel="noopener">
+          <img loading="lazy" src="../assets/slides/page-29.webp" alt="포트폴리오 29페이지">
+          <span>PAGE 29</span>
+        </a>
+
+        <a class="slide" href="../portfolio.pdf#page=30" target="_blank" rel="noopener">
+          <img loading="lazy" src="../assets/slides/page-30.webp" alt="포트폴리오 30페이지">
+          <span>PAGE 30</span>
+        </a></div>
+</div></section>
+</main>
+<footer><div class="wrap footer"><span>© <span id="year"></span> Donghyun Ko</span><a href="../index.html">메인으로 돌아가기 ↑</a></div></footer>
+<script src="../script.js"></script>
+</body></html>

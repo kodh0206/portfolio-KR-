@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SumVive | 고동현 포트폴리오</title>
+<link rel="stylesheet" href="../style.css">
+</head><body>
+<header class="header"><div class="wrap nav"><a class="logo" href="../index.html">DHK<span>.</span></a>
+<nav><a href="../index.html">홈</a><a href="../full-portfolio.html">전체 포트폴리오</a><a href="../portfolio.pdf" target="_blank">PDF</a></nav></div></header>
+
+<main>
+<section class="project-hero"><div class="wrap">
+<div class="breadcrumbs"><a href="../index.html">Portfolio</a><span>/</span><span>SumVive</span></div>
+<p class="kicker">PROJECT DETAIL</p><h1>SumVive</h1><p class="lead">랜덤 보드에서도 항상 플레이 가능한 산술 생존 퍼즐</p>
+<div class="project-meta"><span class="chip">세로형 산술 생존 퍼즐</span><span class="chip">Unity 6</span><span class="chip">C#</span><span class="chip">URP 17</span><span class="chip">WebGL · 모바일</span><span class="chip">720 × 1280</span></div>
+<div class="actions">
+<a class="btn primary" href="#slides">원본 페이지 보기</a>
+<a class="btn" href="sumvive.pdf" target="_blank">프로젝트 PDF</a>
+<a class="btn" href="https://github.com/kodh0206/MathStudy" target="_blank" rel="noopener">GitHub</a>
+<a class="btn" href="https://kodh0206.github.io/MathStudy/" target="_blank" rel="noopener">플레이 링크</a>
+</div>
+</div></section>
+
+<section class="section"><div class="wrap">
+<div class="heading"><p class="kicker">PROBLEM SOLVING</p><h2>문제와 선택한 구조</h2></div>
+<div class="detail-grid"><div class="detail-card"><h3>규칙과 화면 책임 분리</h3><p>보드·연결·정답·Fever·장애물·생존 규칙을 Unity와 분리된 영역으로 두고, 화면은 확정된 결과만 받아 표시하도록 구성했습니다.</p></div>
+<div class="detail-card"><h3>드래그 경로 일관성</h3><p>위치 정보와 BlockId를 함께 사용해 중복 선택, 되돌리기, 오래된 선택을 규칙 영역에서 일관되게 검증했습니다.</p></div>
+<div class="detail-card"><h3>풀이 가능한 목표값</h3><p>목표값을 먼저 뽑지 않고 제한 DFS + 백트래킹으로 현재 보드에서 실제 가능한 목표 후보와 풀이 경로를 함께 탐색했습니다.</p></div>
+<div class="detail-card"><h3>탐색 상한 관리</h3><p>최악 복잡도를 숨기지 않고 MaxPathLength, MaxTarget, 노드 확장 수와 가지치기를 이용해 실제 실행량을 통제했습니다.</p></div>
+<div class="detail-card"><h3>진행 불가 복구</h3><p>현재 목표 확인 → 다른 목표 탐색 → 필요할 때만 Fisher-Yates 재배치 → DFS 재검증 순서로 복구하며 검증된 보드만 공개합니다.</p></div></div>
+<div class="project-nav"><a class="" href="samurai.html"><strong>사무라이 키우기</strong><br><span>소규모 팀에서 상용 방치형 RPG의 클라이언트 시스템을 직접 설계</span></a><a class="active" href="sumvive.html"><strong>SumVive</strong><br><span>랜덤 보드에서도 항상 플레이 가능한 산술 생존 퍼즐</span></a><a class="" href="thinkisland.html"><strong>구해줘 씽크아일랜드</strong><br><span>18종 미니게임을 개별 구현이 아닌 공통 흐름으로 관리</span></a></div>
+</div></section>
+
+<section id="slides" class="section alt"><div class="wrap">
+<div class="gallery-head"><div><p class="kicker">ORIGINAL PORTFOLIO PAGES</p><h2>원본 포트폴리오 22-26페이지</h2></div>
+<p>이미지를 클릭하면 원본 PDF의 해당 페이지가 새 탭에서 열립니다.</p></div>
+<div class="slide-gallery">
+        <a class="slide" href="../portfolio.pdf#page=22" target="_blank" rel="noopener">
+          <img loading="lazy" src="../assets/slides/page-22.webp" alt="포트폴리오 22페이지">
+          <span>PAGE 22</span>
+        </a>
+
+        <a class="slide" href="../portfolio.pdf#page=23" target="_blank" rel="noopener">
+          <img loading="lazy" src="../assets/slides/page-23.webp" alt="포트폴리오 23페이지">
+          <span>PAGE 23</span>
+        </a>
+
+        <a class="slide" href="../portfolio.pdf#page=24" target="_blank" rel="noopener">
+          <img loading="lazy" src="../assets/slides/page-24.webp" alt="포트폴리오 24페이지">
+          <span>PAGE 24</span>
+        </a>
+
+        <a class="slide" href="../portfolio.pdf#page=25" target="_blank" rel="noopener">
+          <img loading="lazy" src="../assets/slides/page-25.webp" alt="포트폴리오 25페이지">
+          <span>PAGE 25</span>
+        </a>
+
+        <a class="slide" href="../portfolio.pdf#page=26" target="_blank" rel="noopener">
+          <img loading="lazy" src="../assets/slides/page-26.webp" alt="포트폴리오 26페이지">
+          <span>PAGE 26</span>
+        </a></div>
+</div></section>
+</main>
+<footer><div class="wrap footer"><span>© <span id="year"></span> Donghyun Ko</span><a href="../index.html">메인으로 돌아가기 ↑</a></div></footer>
+<script src="../script.js"></script>
+</body></html>

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>사무라이 키우기 | 고동현 포트폴리오</title>
+<link rel="stylesheet" href="../style.css">
+</head><body>
+<header class="header"><div class="wrap nav"><a class="logo" href="../index.html">DHK<span>.</span></a>
+<nav><a href="../index.html">홈</a><a href="../full-portfolio.html">전체 포트폴리오</a><a href="../portfolio.pdf" target="_blank">PDF</a></nav></div></header>
+
+<main>
+<section class="project-hero"><div class="wrap">
+<div class="breadcrumbs"><a href="../index.html">Portfolio</a><span>/</span><span>사무라이 키우기</span></div>
+<p class="kicker">PROJECT DETAIL</p><h1>사무라이 키우기</h1><p class="lead">소규모 팀에서 상용 방치형 RPG의 클라이언트 시스템을 직접 설계</p>
+<div class="project-meta"><span class="chip">모바일 방치형 RPG</span><span class="chip">2023.10-2025.04</span><span class="chip">Unity 2022.3 LTS</span><span class="chip">C#</span><span class="chip">개발 1 / 기획 1 / 아트 1</span></div>
+<div class="actions">
+<a class="btn primary" href="#slides">원본 페이지 보기</a>
+<a class="btn" href="samurai.pdf" target="_blank">프로젝트 PDF</a>
+<a class="btn" href="https://github.com/kodh0206/SamurailSample" target="_blank" rel="noopener">GitHub</a>
+<a class="btn" href="https://www.youtube.com/watch?v=R9AeUE0eZM0" target="_blank" rel="noopener">플레이 영상</a>
+</div>
+</div></section>
+
+<section class="section"><div class="wrap">
+<div class="heading"><p class="kicker">PROBLEM SOLVING</p><h2>문제와 선택한 구조</h2></div>
+<div class="detail-grid"><div class="detail-card"><h3>연속 성장 처리</h3><p>반복 입력 중에는 원본 데이터와 UI 피드백만 반영하고, 입력 종료 시 파생 능력치 계산과 저장을 한 번 수행하도록 경계를 분리했습니다.</p></div>
+<div class="detail-card"><h3>저장 요청 통합</h3><p>LocalSaveType Flags와 Pending Save Loop를 사용해 여러 시스템의 저장 요청을 병합하고 저장 중 추가 요청도 유실되지 않도록 구성했습니다.</p></div>
+<div class="detail-card"><h3>서버 동기화</h3><p>로컬 저장과 Dirty 상태를 분리하고 변경된 데이터만 서버 저장 Task로 만들어 불필요한 요청을 줄였습니다.</p></div>
+<div class="detail-card"><h3>데이터 경계</h3><p>JSON 역직렬화와 런타임 타입 매핑을 로딩 경계에 모아 외부 데이터 형식이 게임 로직 전체로 퍼지지 않도록 했습니다.</p></div>
+<div class="detail-card"><h3>최대 성장 계산</h3><p>레벨별 선형 반복 O(N)을 등차수열 누적 비용 + 이진 탐색 O(log N)으로 변경하고 Unity Editor에서 10만 건 기준 평균 1,675배 단축을 측정했습니다.</p></div>
+<div class="detail-card"><h3>남은 위험까지 구분</h3><p>저장 루프 경쟁 조건, 서버 저장 중 재변경 유실 가능성, 기기 시간 의존 등 확인된 한계와 다음 개선 방향을 따로 정리했습니다.</p></div></div>
+<div class="project-nav"><a class="active" href="samurai.html"><strong>사무라이 키우기</strong><br><span>소규모 팀에서 상용 방치형 RPG의 클라이언트 시스템을 직접 설계</span></a><a class="" href="sumvive.html"><strong>SumVive</strong><br><span>랜덤 보드에서도 항상 플레이 가능한 산술 생존 퍼즐</span></a><a class="" href="thinkisland.html"><strong>구해줘 씽크아일랜드</strong><br><span>18종 미니게임을 개별 구현이 아닌 공통 흐름으로 관리</span></a></div>
+</div></section>
+
+<section id="slides" class="section alt"><div class="wrap">
+<div class="gallery-head"><div><p class="kicker">ORIGINAL PORTFOLIO PAGES</p><h2>원본 포트폴리오 5-21페이지</h2></div>
+<p>이미지를 클릭하면 원본 PDF의 해당 페이지가 새 탭에서 열립니다.</p></div>
+<div class="slide-gallery">
+        <a class="slide" href="../portfolio.pdf#page=5" target="_blank" rel="noopener">
+          <img loading="lazy" src="../assets/slides/page-05.webp" alt="포트폴리오 5페이지">
+          <span>PAGE 05</span>
+        </a>
+
+        <a class="slide" href="../portfolio.pdf#page=6" target="_blank" rel="noopener">
+          <img loading="lazy" src="../assets/slides/page-06.webp" alt="포트폴리오 6페이지">
+          <span>PAGE 06</span>
+        </a>
+
+        <a class="slide" href="../portfolio.pdf#page=7" target="_blank" rel="noopener">
+          <img loading="lazy" src="../assets/slides/page-07.webp" alt="포트폴리오 7페이지">
+          <span>PAGE 07</span>
+        </a>
+
+        <a class="slide" href="../portfolio.pdf#page=8" target="_blank" rel="noopener">
+          <img loading="lazy" src="../assets/slides/page-08.webp" alt="포트폴리오 8페이지">
+          <span>PAGE 08</span>
+        </a>
+
+        <a class="slide" href="../portfolio.pdf#page=9" target="_blank" rel="noopener">
+          <img loading="lazy" src="../assets/slides/page-09.webp" alt="포트폴리오 9페이지">
+          <span>PAGE 09</span>
+        </a>
+
+        <a class="slide" href="../portfolio.pdf#page=10" target="_blank" rel="noopener">
+          <img loading="lazy" src="../assets/slides/page-10.webp" alt="포트폴리오 10페이지">
+          <span>PAGE 10</span>
+        </a>
+
+        <a class="slide" href="../portfolio.pdf#page=11" target="_blank" rel="noopener">
+          <img loading="lazy" src="../assets/slides/page-11.webp" alt="포트폴리오 11페이지">
+          <span>PAGE 11</span>
+        </a>
+
+        <a class="slide" href="../portfolio.pdf#page=12" target="_blank" rel="noopener">
+          <img loading="lazy" src="../assets/slides/page-12.webp" alt="포트폴리오 12페이지">
+          <span>PAGE 12</span>
+        </a>
+
+        <a class="slide" href="../portfolio.pdf#page=13" target="_blank" rel="noopener">
+          <img loading="lazy" src="../assets/slides/page-13.webp" alt="포트폴리오 13페이지">
+          <span>PAGE 13</span>
+        </a>
+
+        <a class="slide" href="../portfolio.pdf#page=14" target="_blank" rel="noopener">
+          <img loading="lazy" src="../assets/slides/page-14.webp" alt="포트폴리오 14페이지">
+          <span>PAGE 14</span>
+        </a>
+
+        <a class="slide" href="../portfolio.pdf#page=15" target="_blank" rel="noopener">
+          <img loading="lazy" src="../assets/slides/page-15.webp" alt="포트폴리오 15페이지">
+          <span>PAGE 15</span>
+        </a>
+
+        <a class="slide" href="../portfolio.pdf#page=16" target="_blank" rel="noopener">
+          <img loading="lazy" src="../assets/slides/page-16.webp" alt="포트폴리오 16페이지">
+          <span>PAGE 16</span>
+        </a>
+
+        <a class="slide" href="../portfolio.pdf#page=17" target="_blank" rel="noopener">
+          <img loading="lazy" src="../assets/slides/page-17.webp" alt="포트폴리오 17페이지">
+          <span>PAGE 17</span>
+        </a>
+
+        <a class="slide" href="../portfolio.pdf#page=18" target="_blank" rel="noopener">
+          <img loading="lazy" src="../assets/slides/page-18.webp" alt="포트폴리오 18페이지">
+          <span>PAGE 18</span>
+        </a>
+
+        <a class="slide" href="../portfolio.pdf#page=19" target="_blank" rel="noopener">
+          <img loading="lazy" src="../assets/slides/page-19.webp" alt="포트폴리오 19페이지">
+          <span>PAGE 19</span>
+        </a>
+
+        <a class="slide" href="../portfolio.pdf#page=20" target="_blank" rel="noopener">
+          <img loading="lazy" src="../assets/slides/page-20.webp" alt="포트폴리오 20페이지">
+          <span>PAGE 20</span>
+        </a>
+
+        <a class="slide" href="../portfolio.pdf#page=21" target="_blank" rel="noopener">
+          <img loading="lazy" src="../assets/slides/page-21.webp" alt="포트폴리오 21페이지">
+          <span>PAGE 21</span>
+        </a></div>
+</div></section>
+</main>
+<footer><div class="wrap footer"><span>© <span id="year"></span> Donghyun Ko</span><a href="../index.html">메인으로 돌아가기 ↑</a></div></footer>
+<script src="../script.js"></script>
+</body></html>
